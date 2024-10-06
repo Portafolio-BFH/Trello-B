@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Trello_B_Project.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Trello_B_Project.Settings.local')
 
 application = get_asgi_application()
