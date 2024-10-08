@@ -24,6 +24,7 @@ BASE_APPS = [
 
 LOCAL_APPS = [
     'Trello_B_Project.Apps.Trello_B',
+    'Base'
 ]
 
 THIRD_APPS = [

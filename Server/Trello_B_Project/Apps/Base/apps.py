@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class TrelloBConfig(AppConfig):
+class BaseConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'Trello_B_Project.Apps.Trello_B'
+    name = 'Base'
