@@ -12,7 +12,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': 1433,
         'USER': 'sa',
-        'PASSWORD': '72130870Aa',
+        'PASSWORD': '72130870aA',
         'TRUSTED_CONNECTION': 'no'
     }
 }

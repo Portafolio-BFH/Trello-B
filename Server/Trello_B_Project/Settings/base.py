@@ -24,7 +24,7 @@ BASE_APPS = [
 
 LOCAL_APPS = [
     'Trello_B_Project.Apps.Trello_B',
-    'Base'
+    'Trello_B_Project.Apps.Base'
 ]
 
 THIRD_APPS = [
@@ -42,6 +42,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'simple_history.middleware.HistoryRequestMiddleware'
 ]
 
 ROOT_URLCONF = 'Trello_B_Project.urls'
