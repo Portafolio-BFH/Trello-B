@@ -12,6 +12,11 @@ class DashboardCreateAPIView(GeneralCreateAPIView):
     serializer_class = DashboardSerializer
     message_success = "Dashboard created successfully"
 
+class DashboardUpdateAPIView(GeneralUpdateAPIView):
+    serializer_class = DashboardSerializer
+    message_success = "Dashboard updated successfully"
+    message_notfound = "Dashboard not found"
+
 class DashboardDestroyAPIView(GeneralDestroyAPIView):
     serializer_class = DashboardSerializer
     message_success = "Dashboard deleted successfully"

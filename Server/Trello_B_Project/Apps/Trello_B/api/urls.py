@@ -6,5 +6,6 @@ urlpatterns = [
     path('dashboard/', DashboardListAPIView.as_view(), name='Dashboard List'),
     path('dashboard/<int:pk>/', DashboardRetrieveAPIView.as_view(), name='Dashboard By Id'),
     path('dashboard/create/', DashboardCreateAPIView.as_view(), name='Dashboard Create'),
+    path('dashboard/update/<int:pk>/', DashboardUpdateAPIView.as_view(), name='Dashboard Update'),
     path('dashboard/delete/<int:pk>/', DashboardDestroyAPIView.as_view(), name='Dashboard Delete'),
  ]

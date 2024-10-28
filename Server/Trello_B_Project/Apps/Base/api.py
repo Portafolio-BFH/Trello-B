@@ -25,6 +25,24 @@ class GeneralRetrieveAPIView(generics.RetrieveAPIView):
     def get_queryset(self):
         return self.get_serializer().Meta.model.objects.filter(state = True)
 
+class GeneralUpdateAPIView(generics.UpdateAPIView):
+    serializer_class = None
+    message_success = ''
+    message_notfound = ''
+
+    def get_queryset(self):
+        return self.get_serializer().Meta.model.objects.filter(state = True)
+
+    def put(self, request, pk=None):
+        entity = self.get_queryset().filter(id = pk).first()
+        if entity:
+            serializer = self.get_serializer(entity, data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response({'message': self.message_success}, status=status.HTTP_200_OK)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response({'error': self.message_notfound}, status=status.HTTP_404_NOT_FOUND)
+
 class GeneralDestroyAPIView(generics.DestroyAPIView):
     serializer_class = None
     message_success = ''

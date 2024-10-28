@@ -7,13 +7,16 @@ ALLOWED_HOSTS = ['*']
 # Database
 DATABASES = {
     'default': {
-        'ENGINE': 'mssql',
+        'ENGINE': 'sql_server.pyodbc',
         'NAME': 'Trello_B',
         'HOST': 'localhost',
         'PORT': 1433,
         'USER': 'sa',
-        'PASSWORD': '72130870Aa',
-        'TRUSTED_CONNECTION': 'no'
+        'PASSWORD': '72130870aA',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+            'TrustServerCertificate': 'yes',
+        }
     }
 }
 

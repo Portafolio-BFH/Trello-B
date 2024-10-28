@@ -3,7 +3,6 @@ from .base import *
 DEBUG = True
 ALLOWED_HOSTS = ['*']
 
-
 # Database
 DATABASES = {
     'default': {
@@ -13,7 +12,11 @@ DATABASES = {
         'PORT': 1433,
         'USER': 'sa',
         'PASSWORD': '72130870aA',
-        'TRUSTED_CONNECTION': 'no'
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+            'TrustServerCertificate': 'yes',
+            'Trusted_Connection': 'no'
+        }
     }
 }
 
